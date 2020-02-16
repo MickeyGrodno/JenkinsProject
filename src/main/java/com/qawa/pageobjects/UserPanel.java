@@ -9,7 +9,7 @@ public class UserPanel {
     private SelenideElement eShopButton = $(By.xpath("//a[@href='#collapseOne']"));
     private SelenideElement couponsButton = $(By.xpath("//span [text() = 'Coupons']"));
     private SelenideElement userMenuButton = $(By.xpath("//span[@class='caret']"));
-    private SelenideElement logoutButton = $(By.xpath("//a[@href='http://open-eshop.stqa.ru/oc-panel/auth/logout']"));
+    private SelenideElement logoutButton = $(By.xpath("//div[@id='accordion']//span[text()='eShop']"));
 
     public UserPanel() {
     }
