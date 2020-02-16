@@ -1,5 +1,6 @@
 package com.qawa.test;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -16,5 +17,9 @@ public class SearchAndDeleteCouponTest extends DataFixture{
         couponsPage.searchAndDeleteCoupon(couponName);
         couponsPage.searchCoupon(couponName);
         assertTrue(couponsPage.getSearchTableIsEmpty());
+    }
+    @AfterEach
+    public void logout(){
+        userPanel.logOut();
     }
 }

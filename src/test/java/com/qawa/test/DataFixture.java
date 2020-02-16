@@ -31,9 +31,4 @@ public class DataFixture {
         Configuration.holdBrowserOpen = false;
         open(loginPageUrl);
     }
-
-    @AfterEach
-    public void after(){
-        WebDriverRunner.closeWindow();
-    }
 }

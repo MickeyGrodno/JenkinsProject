@@ -20,5 +20,6 @@ public class CreateNewCouponTest extends DataFixture{
     @AfterEach
     public void deleteCoupon(){
         couponsPage.searchAndDeleteCoupon(couponName);
+        userPanel.logOut();
     }
 }

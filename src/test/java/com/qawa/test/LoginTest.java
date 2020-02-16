@@ -1,6 +1,7 @@
 package com.qawa.test;
 
 import com.qawa.pageobjects.LoginPage;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.WebDriverRunner.url;
@@ -16,5 +17,9 @@ public class LoginTest extends DataFixture{
         loginPage = new LoginPage();
         loginPage.loginWithUserData(email,password);
         assertNotEquals(loginPageUrl, url());
+    }
+    @AfterEach
+    public void logout(){
+        userPanel.logOut();
     }
 }
